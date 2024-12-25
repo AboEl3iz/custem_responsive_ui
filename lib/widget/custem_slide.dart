@@ -48,31 +48,36 @@ class _custemSlideState extends State<custemSlide> {
                       },
                       child: Container(
                          alignment: Alignment.centerLeft,
-                        height: SizeConfig.screenHeight,
+                        height: MediaQuery.sizeOf(context).height / 10,
                         color: Colors.transparent,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            // const SizedBox(),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(vertical: 20.0 ,horizontal: 10),
-                              child: SvgPicture.asset(
-                                menuIcons[index],
-                                height: 25,
-                                width: 25,
-                                color:iconindex == index ? AppColors.black: AppColors.secondary ,
-                                fit: BoxFit.cover,
+                        child: Flexible(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              // const SizedBox(),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 20.0 ,horizontal: 10),
+                                child: FittedBox(
+                                  fit: BoxFit.scaleDown,
+                                  child: SvgPicture.asset(
+                                    menuIcons[index],
+                                    height: 25,
+                                    width: 25,
+                                    color:iconindex == index ? AppColors.black: AppColors.secondary ,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
                               ),
-                            ),
-                            Container(
-                              height: 40,
-                              width: 2,
-                              decoration: BoxDecoration(
-                                  color:iconindex == index ?  AppColors.primary : AppColors.secondaryBg,
-                                  borderRadius: BorderRadius.circular(10)),
-                            )
-                          ],
+                              Container(
+                                height: 40,
+                                width: 2,
+                                decoration: BoxDecoration(
+                                    color:iconindex == index ?  AppColors.primary : AppColors.secondaryBg,
+                                    borderRadius: BorderRadius.circular(10)),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     )),

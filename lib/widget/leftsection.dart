@@ -22,19 +22,19 @@ class Leftsection extends StatelessWidget {
       color: AppColors.secondaryBg,
       child: SingleChildScrollView(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          headerLeftSection(),
+          const headerLeftSection(),
            SizedBox(
             height: SizeConfig.blockSizeVertical! * 1.5,
           ),
-          CustemCard(),
+          const CustemCard(),
           SizedBox(
             height: SizeConfig.blockSizeVertical! * 2,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 18.0, bottom: 20),
+          const Padding(
+            padding: EdgeInsets.only(left: 18.0, bottom: 20),
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,7 +57,7 @@ class Leftsection extends StatelessWidget {
             (index) => ListTile(
               visualDensity: VisualDensity.standard,
               leading: Container(
-                  padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   height: 40,
                   width: 40,
                   decoration: BoxDecoration(
@@ -85,9 +85,9 @@ class Leftsection extends StatelessWidget {
           SizedBox(
             height: SizeConfig.blockSizeVertical! * 2,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 18.0, bottom: 30),
-            child: Column(
+          const Padding(
+            padding: EdgeInsets.only(left: 18.0, bottom: 30),
+            child:  Column(
               // mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -109,7 +109,7 @@ class Leftsection extends StatelessWidget {
             (index) => ListTile(
               visualDensity: VisualDensity.standard,
               leading: Container(
-                  padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   height: 40,
                   width: 40,
                   decoration: BoxDecoration(
