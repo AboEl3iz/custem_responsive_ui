@@ -8,6 +8,7 @@ import 'package:responsive_ui/utils/size_config.dart';
 import 'package:responsive_ui/widget/chart.dart';
 import 'package:responsive_ui/widget/chart2.dart';
 import 'package:responsive_ui/widget/custem_card_view.dart';
+import 'package:responsive_ui/widget/header_left_section.dart';
 import 'package:responsive_ui/widget/history.dart';
 import 'package:responsive_ui/widget/leftsection.dart';
 
@@ -29,6 +30,7 @@ class centerDashboard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,7 +47,8 @@ class centerDashboard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Spacer(),
+                 
+                  if(!Responsive.isMobile(context))
                   Expanded(
                     child: TextField(
                       decoration: InputDecoration(
@@ -63,7 +66,19 @@ class centerDashboard extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20),
                               borderSide: BorderSide.none)),
                     ),
-                  )
+                  ),
+                  if(Responsive.isMobile(context))
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [IconButton(
+                        icon: Icon(Icons.search),
+                        onPressed: () {},
+                                          ),headerLeftSection()]
+                      ),
+                    ),
+                  
+                  
                 ],
               ),
             ),

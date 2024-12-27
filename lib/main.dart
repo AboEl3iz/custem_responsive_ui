@@ -1,9 +1,11 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_ui/widget/dashboard.dart';
 
 void main() {
-  runApp(const MyApp());
+  
+  runApp( DevicePreview(builder:(context) =>  MyApp() ,enabled: true,));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,6 +15,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+       useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(

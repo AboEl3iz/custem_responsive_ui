@@ -14,13 +14,13 @@ class custemCardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: Responsive.isMobile(context)?   1.7:3.8,
+      aspectRatio: Responsive.isMobile(context)?   17/16:3.8,
       child: SizedBox(
         width: double.infinity,
         child: GridView.builder(
           shrinkWrap: true,
           gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-            childAspectRatio: Responsive.isMobile(context)? 1.6:3/4,
+            childAspectRatio: Responsive.isMobile(context)? 16/14:3/4,
             mainAxisSpacing: 10,
             crossAxisSpacing: Responsive.isMobile(context) ?12: 14,
 

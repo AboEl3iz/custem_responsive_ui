@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.8
+  device_preview: ^1.2.0
   fl_chart: ^0.69.2
   flutter:
     sdk: flutter
@@ -68,7 +69,5 @@ flutter:
         - asset: fonts/Poppins-Medium.ttf
         - asset: fonts/Poppins-SemiBold.ttf
         - asset: fonts/Poppins-Bold.ttf
-
-  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
