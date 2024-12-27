@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_ui/style/colors.dart';
 import 'package:responsive_ui/style/style.dart';
+import 'package:responsive_ui/utils/responsive.dart';
 import 'package:responsive_ui/utils/size_config.dart';
 import 'package:responsive_ui/widget/custem_card.dart';
 import 'package:responsive_ui/widget/header_left_section.dart';
@@ -25,6 +26,7 @@ class Leftsection extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
+          if(!Responsive.isMobile(context))
           const headerLeftSection(),
            SizedBox(
             height: SizeConfig.blockSizeVertical! * 1.5,
